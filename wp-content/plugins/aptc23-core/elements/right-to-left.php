@@ -166,7 +166,7 @@ class Widget_Infinite_Image_Carousel extends Widget_Base
             ]
         );
 
-        $repeater_rtl->add_control(
+        $repeater_ltr->add_control(
             'color_class',
             [
                 'label' => __('Color Class', 'your-textdomain'),
