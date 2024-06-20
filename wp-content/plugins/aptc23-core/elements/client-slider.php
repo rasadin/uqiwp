@@ -176,8 +176,8 @@ class Widget_Client_Review_Carousel extends Widget_Base
 
 
             <div class="btns">
-            <div class="customNextBtn">Next</div>
             <div class="customPreviousBtn">Previous</div>
+            <div class="customNextBtn">Next</div>
             </div>
 
 
