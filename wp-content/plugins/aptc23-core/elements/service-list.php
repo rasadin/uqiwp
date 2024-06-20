@@ -180,7 +180,7 @@ class Widget_Service_List extends Widget_Base
                                 </div>
 
 
-<div class="blank-div"></div>
+                                <div class="blank-div"></div>
 
                             </div>
 
