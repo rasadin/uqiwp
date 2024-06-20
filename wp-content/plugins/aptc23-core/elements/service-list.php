@@ -176,6 +176,7 @@ class Widget_Service_List extends Widget_Base
 
                                 <div class="service-review-section-dis">
                                     <?php echo $slide['description']; ?>
+                                    <div class="blank-div"></div>
                                 </div>
 
 
