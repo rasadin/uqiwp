@@ -56,6 +56,17 @@ class Widget_Infinite_Image_Carousel extends Widget_Base
             ]
         );
 
+
+        $repeater_rtl->add_control(
+            'color_class',
+            [
+                'label' => __('Color Class', 'your-textdomain'),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => __('color-common', 'your-textdomain'),
+                'label_block' => true,
+            ]
+        );
+
         $repeater_rtl->add_control(
             'subtext',
             [
@@ -203,7 +214,7 @@ class Widget_Infinite_Image_Carousel extends Widget_Base
             <div class="infinite-image-carousel right-to-left">
                 <div class="carousel-track rtl-track">
                     <?php foreach ($settings['slides_rtl'] as $slide) : ?>
-                        <div class="carousel-slide">
+                        <div class="carousel-slide <?php echo esc_html($slide['color_class']); ?>"> 
                             <div class="carousel-content">
 
                                 <div class="part-name">
@@ -232,7 +243,7 @@ class Widget_Infinite_Image_Carousel extends Widget_Base
             <div class="infinite-image-carousel left-to-right">
                 <div class="carousel-track ltr-track">
                     <?php foreach ($settings['slides_ltr'] as $slide) : ?>
-                        <div class="carousel-slide">
+                        <div class="carousel-slide <?php echo esc_html($slide['color_class']); ?>">
                             <div class="carousel-content">
 
                                 <div class="part-name">
