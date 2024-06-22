@@ -16,7 +16,10 @@ get_header();
 ?>
 <div class="container">
 	<div class="row">
-		<div class="col-md-9">
+		<div class="col-md-12">
+
+
+
 			<div id="primary" class="webalive-content-area">
 				<main id="main" class="webalive-site-main">
 
@@ -45,7 +48,7 @@ get_header();
 						* If you want to override this in a child theme, then include a file
 						* called content-___.php (where ___ is the Post Type name) and that will be used instead.
 						*/
-						get_template_part( 'template-parts/post/content', get_post_type() );
+						get_template_part( 'template-parts/blog-list/content', get_post_type() );
 
 					endwhile;
 
@@ -78,24 +81,10 @@ get_header();
 				?>
 				</main><!-- #main -->
 			</div><!-- #primary -->
-		</div>
-		<div class="col-md-3">
-				
-			<?php 
-				/**
-				 * webalive_before_sidebar hook
-				 */
-				do_action( 'webalive_before_sidebar' );
 
-				get_sidebar();
-				
-				/**
-				 * webalive_after_sidebar hook
-				 */
-				do_action( 'webalive_after_sidebar' );
-			?>
-			
+
 		</div>
+
 	</div>
 </div>
 	

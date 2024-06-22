@@ -284,3 +284,83 @@ function webalive_theme_options() {
 		'webalive_header_type' => 'default', // Options: default, large, minimal, none
 	);
 }
+
+
+
+
+
+function custom_posts_with_pagination($atts) {
+    $atts = shortcode_atts(
+        array(
+            'posts_per_page' => 5,
+        ), 
+        $atts, 
+        'custom_posts_pagination'
+    );
+
+    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+    
+    $args = array(
+        'post_type' => 'post',
+        'posts_per_page' => $atts['posts_per_page'],
+        'paged' => $paged,
+    );
+
+    $query = new WP_Query($args);
+    $output = '<div class="custom-posts-pagination">';
+
+    if ($query->have_posts()) {
+        while ($query->have_posts()) {
+            $query->the_post();
+            
+            $output .= '<div class="custom-post-item">';
+            $output .= '<a href="' . get_permalink() . '">';
+            if (has_post_thumbnail()) {
+                $output .= get_the_post_thumbnail(get_the_ID(), 'thumbnail');
+            }
+            $output .= '<div class="post-content-date">';
+            $output .= '<span class="post-date">' . get_the_date() . '</span>';
+            $output .= '<p>' . wp_trim_words(get_the_content(), 30, '...') . '</p>';
+            $output .= '</div>';
+            $output .= '<h2>' . get_the_title() . '</h2>';
+            $output .= '</a>';
+            $output .= '</div>';
+        }
+
+        $output .= '<div class="pagination">';
+        $big = 999999999; // need an unlikely integer
+
+        $output .= paginate_links(array(
+            'base'    => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+            'format'  => '?paged=%#%',
+            'current' => max(1, get_query_var('paged')),
+            'total'   => $query->max_num_pages,
+        ));
+        $output .= '</div>';
+    } else {
+        $output .= '<p>No posts found.</p>';
+    }
+
+    $output .= '</div>';
+    wp_reset_postdata();
+    
+    return $output;
+}
+add_shortcode('custom_posts_pagination', 'custom_posts_with_pagination');
+
+
+
+
+// Function to output the sidebar wrapped in a div
+function custom_sidebar_shortcode() {
+    ob_start(); // Start output buffering
+    ?>
+    <div class="side-bar-dom">
+        <?php get_sidebar(); ?>
+    </div>
+    <?php
+    return ob_get_clean(); // Return the buffered output
+}
+
+// Register the shortcode
+add_shortcode('custom_sidebar', 'custom_sidebar_shortcode');
