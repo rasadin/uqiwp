@@ -315,14 +315,25 @@ function custom_posts_with_pagination($atts) {
             
             $output .= '<div class="custom-post-item">';
             $output .= '<a href="' . get_permalink() . '">';
+
+			$output .= '<div class="post-content-box">';
+			$output .= '<div class="post-img-box">';
             if (has_post_thumbnail()) {
                 $output .= get_the_post_thumbnail(get_the_ID(), 'thumbnail');
             }
+			$output .= '</div>';
+
+
             $output .= '<div class="post-content-date">';
             $output .= '<span class="post-date">' . get_the_date() . '</span>';
             $output .= '<p>' . wp_trim_words(get_the_content(), 30, '...') . '</p>';
             $output .= '</div>';
+			$output .= '</div>';
+
+			$output .= '<div class="post-title-box">';
             $output .= '<h2>' . get_the_title() . '</h2>';
+			$output .= '</div>';
+			
             $output .= '</a>';
             $output .= '</div>';
         }
