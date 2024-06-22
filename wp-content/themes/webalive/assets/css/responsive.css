@@ -1,6 +1,11 @@
 /*Laptop*/
 @media only screen and (max-width:1440px) {
-
+.carousel-slide img {
+    height: 251px !important;
+}
+.client-review-section-right {
+    padding-right: 20px;
+}
 }
 /*Laptop*/
 @media only screen and (max-width:1366px) {
@@ -12,11 +17,109 @@
 }
 /*Tab Landscape*/
 @media only screen and (max-width:1024px) {
-
+.client-review-section-name {
+    font-size: 73px;
+    line-height:67px;
+}
+.client-review-section-dis p {
+    font-size: 22px;
+    line-height: 36px;
+}
+.client-review-section-right {
+    padding-left: 5px;
+    padding-top: 144px;
+    padding-right: 20px;
+}
+.service-review-section-right {
+    padding-left: 65px;
+}
+.infinite-image-carousel-container .carousel-content {
+    padding: 15px;
+}
+.htmega-postslider-layout-2 .content .post-inner h2 {
+    font-size: 32px !important;
+    line-height: 41px;
+}
+.foo-colume-2 {
+    padding-left: 0;
+}
+.service-service {
+    background-color: #F1F1F1;
+    padding-left: 34px;
+    padding-top: 40px;
+}
+.service-review-section-title {
+    font-size: 46px;
+}
+.service-review-section-title {
+    font-size: 46px;
+}
+.foo-colume-1 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50.333333%;
+    flex: 0 0 50.333333%;
+    max-width: 50.333333%;
+}
+.foo-colume-3 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 16.333333%;
+    flex: 0 0 16.333333%;
+    max-width: 16.333333%;
+}
+.client-review-section-dig {
+    font-size: 40px;
+}
+footer.webalive-footer {
+    padding: 106px 0px 5px 0;
+}
+.footer-bottom {
+    margin-top: 52px;
+}
+.blog-des-content p{
+	font-size:24px;
+	line-height:32px;
+	color:#999999;
+	font-weight:700;
+}
+.custom-posts-pagination .post-img-box img {
+    max-width: 361px;
+    height: 280px !important;
+    width: 100%;
+    object-fit: cover;
+}
+.custom-posts-pagination .post-content-date {
+    padding-left:45px;
+    padding-right:20px;
+    padding-top: 44px;
+}
+.custom-posts-pagination .post-title-box {
+    margin-left: 100px;
+    padding:34px 30px 11px 30px;
+    background-color: #E3E3E3;
+    margin-top: -118px;
+	min-height:auto;
+}
+.custom-posts-pagination .post-title-box h2 {
+    font-size: 32px;
+    line-height: 35px;
+}
+.blog-section .htb-col-lg-6.htmega-post-slider-left {
+    -ms-flex: 0 0 42%;
+    flex: 0 0 42%;
+    max-width: 42%;
+}
 }
 /*Tab Portrait*/
 @media only screen and (max-width:991px) {
-
+.blog-section .htb-col-lg-6.htmega-post-slider-left {
+    -ms-flex: 0 0 90%;
+    flex: 0 0 90%;
+    max-width:90%;
+}
+.blog-section .htmega-post-slider-right .content {
+    padding-top: 47px;
+	padding-right:25px;
+}
 }
 /*Tab Portrait*/
 @media only screen and (max-width:768px) {
@@ -24,7 +127,168 @@
 }
 /*Mobile View Start*/
 @media only screen and (max-width:767px) {
+.service-service {
+    background-color: #F1F1F1;
+    padding:15px;
+}
+.service-review-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+.service-review-section-right {
+    padding-left: 0;
+	padding-top:20px;
+}
+.client-review-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+.client-review-section-left {
+    width: 100%;
+    padding-right:20px;
+}
+.client-review-section-right {
+    padding-left: 15px;
+    padding-top: 24px;
+    padding-right: 15px;
+    width: 100%;
+}
+.client-review-section-dig {
+    font-size: 38px;
+    padding-bottom:54px;
+    line-height: 45px;
+}
+footer.webalive-footer {
+    padding: 80px 0px 5px 0;
+}
+.foo-colume-2 {
+    padding-left: 15px;
+}
+.footer-bottom {
+    margin-top: 30px;
+}
+.webalive-footer .container {
+    text-align: center;
+}
+.copy-right-content {
+    padding-left: 15px;
+}
+.infinite-image-carousel-container .image-name {
+    font-size: 15px;
+}
+.carousel-track {
+    gap: 18px;
+}
+.carousel-slide {
+    width: calc(100% / 3) !important;
+}
+.carousel-slide img {
+    height: 154px !important;
+}
+.service-review-section-photo img {
+    height: auto!important;
+}
+.service-review-section-title {
+    font-size: 38px;
+    line-height:41px;
+}
+.service-review-section-dis ul li {
+    padding: 11px 0px;
+    font-size: 25px;   
+}
+.service-review-section-subtext {
+    font-size: 17px;
+    margin-bottom: 26px;
+}
+.service-service .service {
+    margin-bottom: 60px;
+}
+.client-review-section-name {
+    font-size: 45px;
+    line-height:43px;
+}
+.client-review-section-name-logo {
+    padding: 14px 16px;
+}
 
+.contain-client .btns {
+    margin-right: 15px;
+    padding-bottom:60px;
+}
+.blog-section .htb-col-lg-6.htmega-post-slider-left {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.contact-form-section .form-head p {
+    margin-bottom: 31px;
+    line-height: 38px;
+    font-size: 29px;
+}
+.htmega-postslider-layout-2 .content .post-inner h2 {
+    font-size: 28px !important;
+    line-height: 34px;
+}
+.client-review-section-photo {
+    margin-top: 35px;
+    justify-content: center;
+}
+.contact-form-section .details-part {
+    margin-top: 18px;
+}
+.foo-colume-1 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.foo-colume-3 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.blog-des-content p {
+    font-size: 16px;
+    line-height: 28px;
+}
+.custom-posts-pagination .post-content-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+.custom-posts-pagination .post-img-box {
+    width: 100%;
+}
+.custom-posts-pagination .post-content-date {
+    padding-left:0px;
+    padding-right: 20px;
+    padding-top:24px;
+    width: 100%;
+}
+.custom-posts-pagination .post-title-box {
+    margin-left: 4px;
+    padding: 18px 20px 11px 20px;
+    background-color: #E3E3E3;
+    margin-top: 0;
+    min-height: auto;
+}
+.custom-posts-pagination .post-title-box h2 {
+    font-size: 27px;
+    line-height: 35px;
+}
+.custom-posts-pagination .post-title-box h2 {
+    font-size: 22px;
+    line-height: 26px;
+}
+.foo-colume-1,
+.foo-colume-2,
+.foo-colume-3,
+.foo-colume-4 {
+    padding-left: 0;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width:100%;
+}
 }
 /*Mobile View Small*/
 @media only screen and (max-width:360px) {

@@ -1,6 +1,7 @@
 <header id="masthead" class="webalive-header webalive-inline-menu">
 		<nav id="site-navigation" class="webalive-navbar">
 		    <div class="container">
+			   <div class="tranlate-language">+ ENGLISH</div>
 				<div class="webalive-menu-wrap">
 					<div class="webalive-brand-wrap">
 						<?php  
