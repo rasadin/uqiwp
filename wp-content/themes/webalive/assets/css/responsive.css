@@ -108,6 +108,13 @@ footer.webalive-footer {
     flex: 0 0 42%;
     max-width: 42%;
 }
+.blog-des-content ul li, 
+.blog-des-content ol li {
+    margin: 0 0 18px 0;
+    color: #000000;
+    font-size: 19px;
+    line-height: 32px;
+}
 }
 /*Tab Portrait*/
 @media only screen and (max-width:991px) {
@@ -283,11 +290,22 @@ footer.webalive-footer {
 .foo-colume-2,
 .foo-colume-3,
 .foo-colume-4 {
-    padding-left: 0;
+    padding-left:15px;
     -webkit-box-flex: 0;
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width:100%;
+}
+.blog-des-content ul li, 
+.blog-des-content ol li {
+    margin: 0 0 18px 0;
+    color: #000000;
+    font-size: 15px;
+    line-height: 28px;
+    font-weight: 400;
+}
+.blog-des-content p {
+    margin: 0 0 25px 0;
 }
 }
 /*Mobile View Small*/

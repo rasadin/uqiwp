@@ -842,8 +842,17 @@ section.error-404.not-found {
 	line-height:48px;
 	color:#999999;
 	font-weight:700;
+	margin: 0 0 40px 0;
 }
-
+.blog-des-content ul li, 
+.blog-des-content ol li {
+    padding: 0;
+    margin: 0 0 18px 0;
+    color: #000000;
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 400;
+}
 /*blog listing start*/
 .custom-posts-pagination .post-content-box{
 	display:flex;
@@ -938,9 +947,11 @@ section.error-404.not-found {
 /*blog listing end*/
 
 /*search no result start*/
+.search-results .webalive-site-content .col-md-3,
 .search-no-results .webalive-site-content .col-md-3{
 	display:none;
 }
+.search-results .webalive-site-content .col-md-9,
 .search-no-results .webalive-site-content .col-md-9{
     -webkit-box-flex: 0;
     -ms-flex: 0 0 100%;
@@ -960,4 +971,65 @@ section.no-results.not-found h1 {
 /*search no result end*/
 .link-box-list a{
     color:#999999;
+}
+
+
+/*search start*/
+.search-results .page-title{
+
+}
+.search-results span.byline {
+    display: none !important;
+}
+.search-results .entry-footer{
+    display: none !important;
+}
+
+.search-results article .entry-summary {
+    margin: 20px 0 0;
+}
+
+.search-results article h2 a{
+    font-size: 28px;
+    line-height: 1.45;
+    color:#333;
+    text-decoration:none;
+}
+.search-results article h2 a:hover{
+    color:#999;
+}
+
+.search-results .webalive-site-main .entry-header {
+    text-align: left;
+}
+.search-results .webalive-content-area {
+	text-align: left;
+}
+.search-results .posts-navigation a{
+    background-color: #000;
+    text-decoration: none !important;
+    padding: 12px 20px;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: bold;
+    font-family: "Bai Jamjuree", sans-serif !important;
+}
+.search-results .posts-navigation a:hover{
+    background-color: #999;
+}
+.search-results .webalive-content-area  .post-thumbnail{
+    display:none;
+}
+.search-results .webalive-site-main article {
+    border-bottom: 1px solid #f1f1f1;
+    margin: 0 0 30px;
+    padding: 0 0 30px;
+}
+.search-results .posted-on{
+	font-size:14px;
+}
+.search-results .posted-ona{
+	color:#999;
 }
