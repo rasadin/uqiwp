@@ -464,8 +464,7 @@ header .container {
 	color:#000;
 }
 .service-review-section-left {
-    max-width: 435px;
-    width: 100%;
+    min-width: 435px;
 }
 .service-review-section-right {
     padding-left: 152px;
