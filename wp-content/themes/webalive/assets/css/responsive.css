@@ -133,6 +133,9 @@ footer.webalive-footer {
     padding-top: 47px;
 	padding-right:25px;
 }
+.contact-form-section .wpcf7-form-control-wrap .wpcf7-list-item label {
+    padding: 5px 15px 5px 6px!important;
+}
 }
 /*Tab Portrait*/
 @media only screen and (max-width:768px) {
