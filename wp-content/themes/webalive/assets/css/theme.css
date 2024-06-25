@@ -832,6 +832,7 @@ section.error-404.not-found {
 	border:1px solid #fff;
 	padding:0px 2px;
 	border-radius:3px;
+	margin: 5px;
 }
 .note-text-box .text-color{
 	color:#525252;
