@@ -121,6 +121,13 @@ footer.webalive-footer {
 .service-review-section-left {
     min-width: 298px;
 }
+.home-header-logo-animation ul li {
+    max-width:100%;
+    padding: 10px;
+}
+.client-review-section-dis {
+    padding-right:15px;
+}
 }
 /*Tab Portrait*/
 @media only screen and (max-width:991px) {
@@ -341,6 +348,19 @@ button.htmega-carosul-next.slick-arrow i:before {
 }
 .custom-posts-pagination .post-img-box img {
     height: auto;
+}
+.home-header-logo-animation ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.image-box-wrap img {
+    max-width: 75% !important;
+}
+.home-header-logo-animation ul li {
+    min-height:70px;
+    margin: 0;
+}
+.client-review-section-dis {
+    padding-right:0;
 }
 }
 /*Mobile View Small*/
