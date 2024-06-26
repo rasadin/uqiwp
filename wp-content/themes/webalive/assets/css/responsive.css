@@ -403,6 +403,12 @@ button.htmega-carosul-next.slick-arrow i:before {
 .subscribe-colume-box .wpcf7-not-valid-tip {
     text-align: center;
 }
+.served-text {
+    font-size: 10px;
+}
+.served-text sup{
+    font-size:12px;
+}
 }
 
 /*Mobile View Small*/

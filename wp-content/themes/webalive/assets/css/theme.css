@@ -1138,3 +1138,11 @@ section.no-results.not-found h1 {
     /*max-width: 580px;*/
 	width:100%;
 }
+.served-text{
+    color:#999999;
+    font-size:16px;
+}
+.served-text sup{
+    color:#999999;
+    font-size:18px;
+}
