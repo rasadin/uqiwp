@@ -1100,3 +1100,41 @@ section.no-results.not-found h1 {
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
 }
+
+.subscribe-box{
+    display: flex;
+}
+.subscribe-box input[type="email"]{
+    font-size:67px;
+	font-weight:700;
+	font-family: 'Thunder' !important;
+	color:rgba(153, 153, 153, 0.56);
+	width:100%;
+    padding: 0px;
+    line-height: 69px;
+    padding-right: 15px;
+}
+.subscribe-box p{
+	margin-bottom:0;
+}
+.subscribe-box input[type="submit"]{
+	font-size: 63px;
+    font-weight: 700;
+    font-family: 'Thunder' !important;
+    background: transparent !important;
+    color:#B2B2B2;
+    border: 0;
+	padding: 0 0px;
+	cursor:pointer;
+}
+
+.subscribe-colume-box .wpcf7 form.invalid .wpcf7-response-output, 
+.subscribe-colume-box .wpcf7 form.unaccepted .wpcf7-response-output, 
+.subscribe-colume-box .wpcf7 form.payment-required .wpcf7-response-output {ss
+    color: #fff;
+    border: 1px solid #999;
+    margin: 0;
+    font-size: 14px;
+    /*max-width: 580px;*/
+	width:100%;
+}

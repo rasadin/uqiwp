@@ -212,12 +212,12 @@ footer.webalive-footer {
     height: auto!important;
 }
 .service-review-section-title {
-    font-size: 38px;
-    line-height:41px;
+    font-size: 32px;
+    line-height:37px;
 }
 .service-review-section-dis ul li {
-    padding: 11px 0px;
-    font-size: 25px;   
+    padding:8px 0px;
+    font-size:22px;   
 }
 .service-review-section-subtext {
     font-size: 17px;
@@ -362,7 +362,49 @@ button.htmega-carosul-next.slick-arrow i:before {
 .client-review-section-dis {
     padding-right:0;
 }
+.subscribe-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
+
+.subscribe-box input[type="email"] {
+    font-size: 30px;
+    line-height: 34px;
+    text-align: center;
+    padding: 0;
+}
+.subscribe-box input[type="submit"] {
+    font-size: 30px;
+    line-height:34px;
+    width: 100%;
+    margin-bottom:15px;
+}
+.subscribe-colume-box .wpcf7 form.invalid .wpcf7-response-output, 
+.subscribe-colume-box .wpcf7 form.unaccepted .wpcf7-response-output, 
+.subscribe-colume-box .wpcf7 form.payment-required .wpcf7-response-output {
+    border: 1px solid #999;
+    margin: 0;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+}
+.foo-colume-1 div:nth-child(2) p {
+    font-size: 26px;
+}
+.blank-div {
+    height: 93px;
+}
+.subscribe-colume-box .wpcf7-spinner {
+    margin: 9px 24px;
+    position: absolute;
+}
+.subscribe-colume-box .wpcf7-not-valid-tip {
+    text-align: center;
+}
+}
+
 /*Mobile View Small*/
 @media only screen and (max-width:360px) {
 
