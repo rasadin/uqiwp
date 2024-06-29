@@ -1146,3 +1146,12 @@ section.no-results.not-found h1 {
     color:#999999;
     font-size:18px;
 }
+.uqiwp-copyright-widget{
+	margin-bottom:0px !important;
+}
+.uqiwp-copyright-widget figure {
+    margin: 0 0 5px 0;
+}
+.uqiwp-copyright-widget p{
+	font-size:15px;
+}
