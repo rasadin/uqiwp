@@ -1068,7 +1068,7 @@ class Bl_Post_Archive_ELement extends Widget_Base {
 
                                         <?php if( $settings['show_title'] == 'yes' ): ?>
                                             <h3 class="htbuilder-post-title">
-                                                <a href="<?php the_permalink(); ?>"><?php echo wp_trim_words( get_the_title(), floatval( $settings['title_length'] ), '' ); ?></a>
+                                                <a href="<?php the_permalink(); ?>"><?php echo esc_html( wp_trim_words( get_the_title(), floatval( $settings['title_length'] ), '' ) ); ?></a>
                                             </h3>
                                         <?php endif; ?>
 
@@ -1076,21 +1076,21 @@ class Bl_Post_Archive_ELement extends Widget_Base {
                                             <div class="htbuilder-post-meta-info">
                                                 <?php the_time( esc_html__('M d, Y','htmega-addons') );?>
                                                 <span class="htbuilder-meta-separator"> -</span>
-                                                <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>" class="htauthor">
+                                                <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ) ); ?>" class="htauthor">
                                                     <?php the_author();?>
                                                 </a>
                                             </div>
                                         <?php endif; ?>
 
                                         <div class="htbuilder-post-content">
-                                            <p><?php echo wp_trim_words( get_the_content(), floatval( $settings['content_length'] ), '' ); ?></p>
+                                            <p><?php echo wp_kses_post( wp_trim_words( get_the_content(), floatval( $settings['content_length'] ), '' ) ); ?></p>
                                         </div>
 
                                         <?php if( $settings['show_read_more'] == 'yes' ): ?>
                                             <a class="htbuilder-read-more-btn" href="<?php the_permalink(); ?>">
                                                 <?php
                                                     if( !empty( $settings['read_more_btn_text'] ) ){
-                                                        echo esc_html__( $settings['read_more_btn_text'], 'htmega-addons' );
+                                                        echo esc_html( $settings['read_more_btn_text'] );
                                                     }else{
                                                         echo esc_html__( 'Read more', 'htmega-addons' );
                                                     }
