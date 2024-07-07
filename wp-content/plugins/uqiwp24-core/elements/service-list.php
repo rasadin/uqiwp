@@ -163,12 +163,7 @@ class Widget_Service_List extends Widget_Base
 
                             <div class="service-review-section-right">
 
-                                <div class="service-review-section-title">
-                                    <?php echo $slide['service_name']; ?>
-                                </div>
-
-
-                                
+                               
                                 <div class="service-review-section-subtext">
                                     <?php echo $slide['subtext']; ?>
                                 </div>
@@ -180,13 +175,11 @@ class Widget_Service_List extends Widget_Base
                                 </div>
 
 
-                                <div class="blank-div"></div>
-
                             </div>
-
-
-
                         </div>
+						 <div class="service-review-section-title">
+                                    <?php echo $slide['service_name']; ?>
+                                </div>
                         </a>
                     </div>
 

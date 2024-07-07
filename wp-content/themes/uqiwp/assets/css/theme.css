@@ -416,10 +416,10 @@ header .container {
     object-fit: cover;
 }
 .carousel-track{
-    gap: 40px;
+    gap:32px;
 }
 .infinite-image-carousel-container .carousel-content{
-	padding:45px;
+	padding:0px;
 	background-color:#E3E5E7;
 	position:relative;
 }
@@ -430,7 +430,7 @@ header .container {
 	background-color:#22242B;
 }
 .infinite-image-carousel.left-to-right {
-    margin-top:45px;
+    margin-top:32px;
 }
 .infinite-image-carousel-container .image-name, 
 .infinite-image-carousel-container .image-subtext {
@@ -452,7 +452,7 @@ header .container {
     background-color: #fff;
     display: block;
     left: 0;
-    padding: 3px 31px 10px 0px;
+    padding: 10px 31px 10px 16px;
 }
 
 /*service css start*/
@@ -478,9 +478,15 @@ header .container {
     font-weight: bold;
 	font-family: 'Thunder' !important;
 	font-size:74px;
-	color:#001514;
+	color:#999999;
 	text-transform: uppercase;
 	line-height: 75px;
+	background-color:#D9D9D9;
+	margin-top: -110px;
+    z-index: 1;
+    position: relative;
+    padding: 25px 10px 10px 24px;
+    margin-left: 128px;
 }
 .service-review-section-subtext {
     color:#001514;
@@ -838,10 +844,10 @@ section.error-404.not-found {
 	color:#525252;
 }
 .blog-des-content p{
-	font-size:38px;
+	font-size:36px;
 	line-height:48px;
-	color:#999999;
-	font-weight:700;
+	color:#525252;
+	font-weight:300;
 	margin: 0 0 40px 0;
 }
 .blog-des-content ul li, 
@@ -1046,7 +1052,7 @@ section.no-results.not-found h1 {
 .home-header-logo-animation ul li{
 	background-color:#d0d0d0;
 	min-height:170px;
-	max-width:185px;
+	max-width:100%;
 	padding:15px;
 	display: flex;
     align-items: center;
@@ -1154,4 +1160,7 @@ section.no-results.not-found h1 {
 }
 .uqiwp-copyright-widget p{
 	font-size:15px;
+}
+.home-logo-section  .lgx_app_item_inner {
+	background-color:#141414;
 }

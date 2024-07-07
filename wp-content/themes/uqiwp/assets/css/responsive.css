@@ -6,14 +6,21 @@
 .client-review-section-right {
     padding-right: 20px;
 }
+.home-left-title-content{
+	padding-left:90px !important;
+}
 }
 /*Laptop*/
 @media only screen and (max-width:1366px) {
-
+.home-left-title-content{
+	padding-left:60px !important;
+}
 }
 /*Laptop*/
 @media only screen and (max-width:1280px) {
-
+.home-left-title-content{
+	padding-left:20px !important;
+}
 }
 /*Tab Landscape*/
 @media only screen and (max-width:1024px) {
@@ -34,7 +41,7 @@
     padding-left: 65px;
 }
 .infinite-image-carousel-container .carousel-content {
-    padding: 15px;
+    padding:0px;
 }
 .htmega-postslider-layout-2 .content .post-inner h2 {
     font-size: 32px !important;
@@ -214,6 +221,7 @@ footer.uqiwp-footer {
 .service-review-section-title {
     font-size: 32px;
     line-height:37px;
+	margin:0;
 }
 .service-review-section-dis ul li {
     padding:8px 0px;
