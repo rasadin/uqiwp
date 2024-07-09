@@ -375,3 +375,179 @@ function custom_sidebar_shortcode() {
 
 // Register the shortcode
 add_shortcode('custom_sidebar', 'custom_sidebar_shortcode');
+
+
+
+
+// Shortcode Function
+function list_works_categories() {
+    // Get all categories for the 'works' custom post type
+    $categories = get_terms([
+        'taxonomy' => 'category',
+        'hide_empty' => true,
+        'object_type' => ['works'],
+    ]);
+
+    // Start the HTML output
+    $output = '<div class="list-work"><ul>';
+    $output .= '<li class="item-0"><a href="#" class="category-filter" data-category="all">All</a></li>';
+
+    // Counter for the unique classes
+    $counter = 1;
+
+    // Loop through each category and add it to the list, excluding "Uncategorized"
+    foreach ($categories as $category) {
+        if ($category->name !== 'Uncategorized') {
+            $output .= '<li class="item-' . $counter . '"><a href="#" class="category-filter" data-category="' . esc_attr($category->slug) . '">' . esc_html($category->name) . '</a></li>';
+            $counter++;
+        }
+    }
+
+    // Close the HTML tags
+    $output .= '</ul></div>';
+    $output .= '<div id="works-posts" class="work-section-post"></div>';
+
+    return $output;
+}
+
+// AJAX Handler
+function load_works_posts() {
+    // Check nonce for security
+    check_ajax_referer('works_nonce', 'nonce');
+
+    $category = $_POST['category'];
+
+    $args = [
+        'post_type' => 'work',
+        'posts_per_page' => -1,
+    ];
+
+    if ($category != 'all') {
+        $args['tax_query'] = [
+            [
+                'taxonomy' => 'category',
+                'field' => 'slug',
+                'terms' => $category,
+            ],
+        ];
+    }
+
+    $query = new WP_Query($args);
+
+
+
+	?>
+	<div class="premium-blog-wrap  premium-blog-even">
+	<?php
+    if ($query->have_posts()) {
+        while ($query->have_posts()) {
+            $query->the_post();
+            ?>
+            <div class="premium-blog-post-outer-container" data-total="1" bis_skin_checked="1">
+                <div class="premium-blog-post-container premium-blog-skin-banner" bis_skin_checked="1">
+                    <div class="premium-blog-thumb-effect-wrapper" bis_skin_checked="1">
+                        <div class="premium-blog-thumbnail-container premium-blog-zoomin-effect" bis_skin_checked="1">
+                            <?php the_post_thumbnail('full', ['fetchpriority' => 'high', 'decoding' => 'async', 'alt' => get_the_title()]); ?>
+                        </div>
+                        <div class="premium-blog-thumbnail-overlay" bis_skin_checked="1">
+                            <a class="elementor-icon" href="<?php the_permalink(); ?>" target="_self" aria-hidden="true">
+                                <span><?php the_title(); ?></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="premium-blog-content-wrapper " bis_skin_checked="1" style="height: 202.6px;">
+                        <div class="premium-blog-inner-container" bis_skin_checked="1">
+                            <div class="premium-blog-cats-container" bis_skin_checked="1">
+                                <ul class="post-categories">
+                                    <?php
+                                    $categories = get_the_category();
+                                    foreach ($categories as $cat) {
+                                        echo '<li>' . esc_html($cat->name) . '</li>';
+                                    }
+                                    ?>
+                                </ul>
+                            </div>
+                            <h2 class="premium-blog-entry-title">
+                                <a href="<?php the_permalink(); ?>" target="_self">
+                                    <?php the_title(); ?>
+                                </a>
+                            </h2>
+                            <div class="premium-blog-entry-meta" bis_skin_checked="1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php
+        }
+    } else {
+        echo '<p>No posts found.</p>';
+    }
+
+
+	?>
+	</div>
+	<?php
+    wp_reset_postdata();
+
+    die();
+}
+
+// Register the shortcode
+add_shortcode('list_works_categories', 'list_works_categories');
+
+// Add AJAX actions
+add_action('wp_ajax_load_works_posts', 'load_works_posts');
+add_action('wp_ajax_nopriv_load_works_posts', 'load_works_posts');
+
+
+
+
+/// Include the Inline Script in the Footer
+function inline_custom_scripts() {
+    ?>
+    <script type="text/javascript">
+        // Define the worksAjax object manually
+        var worksAjax = {
+            ajaxurl: '<?php echo admin_url('admin-ajax.php'); ?>',
+            nonce: '<?php echo wp_create_nonce('works_nonce'); ?>'
+        };
+
+        jQuery(document).ready(function($) {
+            function loadPosts(category) {
+                $.ajax({
+                    url: worksAjax.ajaxurl,
+                    type: 'POST',
+                    data: {
+                        action: 'load_works_posts',
+                        category: category,
+                        nonce: worksAjax.nonce
+                    },
+                    success: function(response) {
+                        $('#works-posts').html(response);
+                    }
+                });
+            }
+
+            // Initial load
+            loadPosts('all');
+
+            // Add active class to "All" initially
+            $('.list-work li:first-child a').addClass('active');
+
+            // Handle category filter click
+            $('.list-work').on('click', '.category-filter', function(e) {
+                e.preventDefault();
+                var category = $(this).data('category');
+                
+                // Toggle active class
+                $('.list-work a').removeClass('active');
+                $(this).addClass('active');
+                
+                loadPosts(category);
+            });
+        });
+    </script>
+    <?php
+}
+add_action('wp_footer', 'inline_custom_scripts', 20);
