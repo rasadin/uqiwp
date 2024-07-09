@@ -38,6 +38,8 @@
         });
     });
     
-
+$(document).ready(function() {
+    $(".post-categories li a").contents().unwrap();
+});
 
 })(jQuery);

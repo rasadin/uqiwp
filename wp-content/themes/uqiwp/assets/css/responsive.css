@@ -24,6 +24,9 @@
 }
 /*Tab Landscape*/
 @media only screen and (max-width:1024px) {
+.service-service .service {
+    margin-bottom: 100px;
+}
 .client-review-section-name {
     font-size: 73px;
     line-height:67px;
@@ -135,6 +138,12 @@ footer.uqiwp-footer {
 .client-review-section-dis {
     padding-right:15px;
 }
+.contact-form-section .form-head p {
+    font-size: 60px;
+}
+.foo-colume-1 div:nth-child(2) p {
+    font-size: 27px;
+}
 }
 /*Tab Portrait*/
 @media only screen and (max-width:991px) {
@@ -149,6 +158,16 @@ footer.uqiwp-footer {
 }
 .contact-form-section .wpcf7-form-control-wrap .wpcf7-list-item label {
     padding: 5px 15px 5px 6px!important;
+}
+.work-section-post .premium-blog-post-container .premium-blog-entry-title {
+    font-size: 35px;
+}
+.premium-blog-post-container .premium-blog-cats-container ul.post-categories {
+    flex-wrap: wrap;
+}
+.work-section-post .premium-blog-post-container .premium-blog-cats-container a {
+    font-size: 14px;
+    gap: 0 13px;
 }
 }
 /*Tab Portrait*/
@@ -222,6 +241,7 @@ footer.uqiwp-footer {
     font-size: 32px;
     line-height:37px;
 	margin:0;
+	padding: 26px 20px 20px 20px;
 }
 .service-review-section-dis ul li {
     padding:8px 0px;
@@ -416,6 +436,26 @@ button.htmega-carosul-next.slick-arrow i:before {
 }
 .served-text sup{
     font-size:12px;
+}
+.contact-form-section .two-part {
+    display: grid;
+    grid-template-columns: repeat(1,minmax(0,1fr));
+    grid-gap: 0 25px;
+    margin-top: 5px;
+}
+.contact-form-section input[type="submit"] {
+    font-size: 20px;
+    padding: 19px 0 17px 0;
+    margin-top: 38px;
+    min-width: 199px;
+    border-radius: 0;
+}
+.work-section-post .premium-blog-post-container .premium-blog-entry-title {
+    font-size: 30px;
+    line-height: normal;
+}
+.work-section-post .premium-blog-post-container .premium-blog-cats-container a {
+    font-size: 12px;
 }
 }
 
