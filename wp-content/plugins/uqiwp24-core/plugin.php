@@ -28,8 +28,8 @@ require_once WAE_PLUGIN_PATH .'/inc/elementor-helpers/activator.php';
  */
 add_action( 'wp_enqueue_scripts', 'batside_elementor_core_scripts_styles' );
 function batside_elementor_core_scripts_styles() {
-    // wp_enqueue_style('uqiwp24-owl-carousel', plugins_url('/assets/css/owl.carousel.min.css', __FILE__), '', rand());
-    // wp_enqueue_script('uqiwp24-owl-carousel', plugins_url('/assets/js/owl.carousel.min.js', __FILE__), array('jquery'), rand(), true);
+    wp_enqueue_style('uqiwp24-owl-carousel', plugins_url('/assets/css/owl.carousel.min.css', __FILE__), '', rand());
+    wp_enqueue_script('uqiwp24-owl-carousel', plugins_url('/assets/js/owl.carousel.min.js', __FILE__), array('jquery'), rand(), true);
 
     // Enqueue GSAP and ScrollMagic scripts from CDN
     wp_enqueue_script('gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js', array(), null, true);

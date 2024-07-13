@@ -228,7 +228,7 @@ class Widget_Infinite_Image_Carousel extends Widget_Base
 <div class="control-owl-js">
 <?php if (!empty($settings['slides_rtl'])) : ?>
 <!-- first carousel -->
-<div class="owl-carousel owl-theme">
+<div class="owl-carousel1 owl-theme">
 <?php foreach ($settings['slides_rtl'] as $slide) : ?>
     <div class="item">
         <a href="<?php echo esc_url($slide['link']['url']); ?>" <?php echo $slide['link']['is_external'] ? 'target="_blank"' : ''; ?> <?php echo $slide['link']['nofollow'] ? 'rel="nofollow"' : ''; ?>>
@@ -289,7 +289,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 jQuery(document).ready(function($){
-    var owl = $('.owl-carousel');
+    var owl = $('.owl-carousel1');
     owl.owlCarousel({
         // items: 4,
         loop: true,
