@@ -57,15 +57,15 @@ class Widget_Infinite_Image_Carousel extends Widget_Base
         );
 
 
-        // $repeater_rtl->add_control(
-        //     'color_class',
-        //     [
-        //         'label' => __('Color Class', 'your-textdomain'),
-        //         'type' => \Elementor\Controls_Manager::TEXT,
-        //         'default' => __('color-common', 'your-textdomain'),
-        //         'label_block' => true,
-        //     ]
-        // );
+        $repeater_rtl->add_control(
+            'color_class',
+            [
+                'label' => __('Color Class', 'your-textdomain'),
+                'type' => \Elementor\Controls_Manager::TEXT,
+                'default' => __('color-common', 'your-textdomain'),
+                'label_block' => true,
+            ]
+        );
 
         $repeater_rtl->add_control(
             'subtext',
@@ -216,70 +216,79 @@ class Widget_Infinite_Image_Carousel extends Widget_Base
 {
     $settings = $this->get_settings_for_display();
 
-    if (empty($settings['slides_rtl']) && empty($settings['slides_ltr'])) {
-        return;
-    }
-    ?>
+ 
+?>
 
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css" rel="stylesheet">
 
-
-
-    <div class="infinite-image-carousel-container">
-        <?php if (!empty($settings['slides_rtl'])) : ?>
-           
-            <div class="owl-carousel owl-theme">
+     
 
 
 
 
-                    <?php foreach ($settings['slides_rtl'] as $slide) : ?>
-                    <div class="item">
-                    <a href="<?php echo esc_url($slide['link']['url']); ?>" <?php echo $slide['link']['is_external'] ? 'target="_blank"' : ''; ?> <?php echo $slide['link']['nofollow'] ? 'rel="nofollow"' : ''; ?>>
-                        <div class="title-box">
-                            <div class="slide-title"><?php echo esc_html($slide['name']); ?></div>
-                            <div class="slide-subtitle"><?php echo esc_html($slide['subtext']); ?></div>
-                        </div>
-                        <img src="<?php echo esc_url($slide['image']['url']); ?>" alt="">
-                    </a>
-                    </div>
-                    <?php endforeach; ?>
 
 
 
 
-                </div>
-          
-        <?php endif; ?>
 
-        <?php if (!empty($settings['slides_ltr'])) : ?>
-            <div class="owl-carousel2 owl-theme">
-                    <?php foreach ($settings['slides_ltr'] as $slide) : ?>
-                        <div class="item">
-                    <a href="<?php echo esc_url($slide['link']['url']); ?>" <?php echo $slide['link']['is_external'] ? 'target="_blank"' : ''; ?> <?php echo $slide['link']['nofollow'] ? 'rel="nofollow"' : ''; ?>>
-                        <div class="title-box">
-                            <div class="slide-title"><?php echo esc_html($slide['name']); ?></div>
-                            <div class="slide-subtitle"><?php echo esc_html($slide['subtext']); ?></div>
-                        </div>
-                        <img src="<?php echo esc_url($slide['image']['url']); ?>" alt="">
-                    </a>
-                    </div>
-                    <?php endforeach; ?>
-                </div>
-        <?php endif; ?>
+
+
+
+
+<?php if (!empty($settings['slides_rtl'])) : ?>
+<!-- Second carousel -->
+<div class="owl-carousel owl-theme">
+<?php foreach ($settings['slides_rtl'] as $slide) : ?>
+    <div class="item">
+        <a href="<?php echo esc_url($slide['link']['url']); ?>" <?php echo $slide['link']['is_external'] ? 'target="_blank"' : ''; ?> <?php echo $slide['link']['nofollow'] ? 'rel="nofollow"' : ''; ?>>
+            <div class="part-name">
+            <div class="image-name"><?php echo esc_html($slide['name']); ?></div>
+            <div class="image-subtext"><?php echo esc_html($slide['subtext']); ?></div>
+            </div>
+            <div class="part-img">
+            <img src="<?php echo esc_url($slide['image']['url']); ?>" alt="">
+            </div>
+        </a>
     </div>
+    <?php endforeach; ?>
+</div>
+<?php endif; ?>
 
- 
+     
 
 
+
+
+<?php if (!empty($settings['slides_ltr'])) : ?>
+<!-- Second carousel -->
+<div class="owl-carousel2 owl-theme">
+    <?php foreach ($settings['slides_ltr'] as $slide) : ?>
+    <div class="item">
+        <a href="<?php echo esc_url($slide['link']['url']); ?>" <?php echo $slide['link']['is_external'] ? 'target="_blank"' : ''; ?> <?php echo $slide['link']['nofollow'] ? 'rel="nofollow"' : ''; ?>>
+            <div class="part-name">
+            <div class="image-name"><?php echo esc_html($slide['name']); ?></div>
+            <div class="image-subtext"><?php echo esc_html($slide['subtext']); ?></div>
+            </div>
+            <div class="part-img">
+            <img src="<?php echo esc_url($slide['image']['url']); ?>" alt="">
+            </div>
+        </a>
+    </div>
+    <?php endforeach; ?>
+</div>
+<?php endif; ?>
+
+
+
+    
 
 
 
 
 <script>
-  $(document).ready(function () {
+jQuery(document).ready(function($){
     var owl = $('.owl-carousel');
     owl.owlCarousel({
         items: 8,
@@ -295,7 +304,7 @@ class Widget_Infinite_Image_Carousel extends Widget_Base
 
 });
 //Alternate Direction
-$(document).ready(function () {
+jQuery(document).ready(function($){
     var owl = $('.owl-carousel2');
     owl.owlCarousel({
         items: 8,
@@ -3399,14 +3408,11 @@ $(document).ready(function () {
 </script>
  
 
+<?php
 
 
 
 
-
-
-
-    <?php
 }
 
 
