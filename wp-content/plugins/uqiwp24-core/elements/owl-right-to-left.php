@@ -291,7 +291,7 @@ class Widget_Infinite_Image_Carousel extends Widget_Base
 jQuery(document).ready(function($){
     var owl = $('.owl-carousel');
     owl.owlCarousel({
-        items: 8,
+        // items: 4,
         loop: true,
         margin: 20,
         autoplay: true,
@@ -301,6 +301,23 @@ jQuery(document).ready(function($){
         autoplayHoverPause: true,
         nav:false,
         dots: false,
+        responsive: {
+            0: {
+            items: 2
+            },
+
+            600: {
+            items: 2
+            },
+
+            1024: {
+            items: 4
+            },
+
+            1366: {
+            items: 4
+            }
+        }
 
 
     });
@@ -310,7 +327,7 @@ jQuery(document).ready(function($){
 jQuery(document).ready(function($){
     var owl = $('.owl-carousel2');
     owl.owlCarousel({
-        items: 8,
+        // items: 4,
         rtl: true,
         loop: true,
         margin: 20,
@@ -321,6 +338,23 @@ jQuery(document).ready(function($){
         autoplayHoverPause: true,
         nav: false,
         dots: false,
+        responsive: {
+            0: {
+            items: 2
+            },
+
+            600: {
+            items: 2
+            },
+
+            1024: {
+            items: 4
+            },
+
+            1366: {
+            items: 4
+            }
+        }
 
     });
 
