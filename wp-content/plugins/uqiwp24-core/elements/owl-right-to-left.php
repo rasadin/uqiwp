@@ -298,7 +298,10 @@ jQuery(document).ready(function($){
         slideTransition: 'linear',
         autoplayTimeout: 0,
         autoplaySpeed: 3000,
-        autoplayHoverPause: false
+        autoplayHoverPause: true,
+        nav:false,
+        dots: false,
+
 
     });
 
@@ -315,7 +318,9 @@ jQuery(document).ready(function($){
         slideTransition: 'linear',
         autoplayTimeout: 0,
         autoplaySpeed: 3000,
-        autoplayHoverPause: false
+        autoplayHoverPause: true,
+        nav: false,
+        dots: false,
 
     });
 
