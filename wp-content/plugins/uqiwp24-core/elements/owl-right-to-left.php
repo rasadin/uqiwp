@@ -221,7 +221,7 @@ class Widget_Infinite_Image_Carousel extends Widget_Base
 
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css" rel="stylesheet">
 
      
 
@@ -243,12 +243,14 @@ class Widget_Infinite_Image_Carousel extends Widget_Base
 <?php foreach ($settings['slides_rtl'] as $slide) : ?>
     <div class="item">
         <a href="<?php echo esc_url($slide['link']['url']); ?>" <?php echo $slide['link']['is_external'] ? 'target="_blank"' : ''; ?> <?php echo $slide['link']['nofollow'] ? 'rel="nofollow"' : ''; ?>>
+            <div class="part-im">
             <div class="part-name">
             <div class="image-name"><?php echo esc_html($slide['name']); ?></div>
             <div class="image-subtext"><?php echo esc_html($slide['subtext']); ?></div>
             </div>
             <div class="part-img">
             <img src="<?php echo esc_url($slide['image']['url']); ?>" alt="">
+            </div>
             </div>
         </a>
     </div>
@@ -267,12 +269,14 @@ class Widget_Infinite_Image_Carousel extends Widget_Base
     <?php foreach ($settings['slides_ltr'] as $slide) : ?>
     <div class="item">
         <a href="<?php echo esc_url($slide['link']['url']); ?>" <?php echo $slide['link']['is_external'] ? 'target="_blank"' : ''; ?> <?php echo $slide['link']['nofollow'] ? 'rel="nofollow"' : ''; ?>>
+            <div class="part-im">
             <div class="part-name">
             <div class="image-name"><?php echo esc_html($slide['name']); ?></div>
             <div class="image-subtext"><?php echo esc_html($slide['subtext']); ?></div>
             </div>
             <div class="part-img">
             <img src="<?php echo esc_url($slide['image']['url']); ?>" alt="">
+            </div>
             </div>
         </a>
     </div>
