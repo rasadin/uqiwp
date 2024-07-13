@@ -223,22 +223,11 @@ class Widget_Infinite_Image_Carousel extends Widget_Base
 <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css" rel="stylesheet">
 
-     
 
 
-
-
-
-
-
-
-
-
-
-
-
+<div class="control-owl-js">
 <?php if (!empty($settings['slides_rtl'])) : ?>
-<!-- Second carousel -->
+<!-- first carousel -->
 <div class="owl-carousel owl-theme">
 <?php foreach ($settings['slides_rtl'] as $slide) : ?>
     <div class="item">
@@ -283,7 +272,7 @@ class Widget_Infinite_Image_Carousel extends Widget_Base
     <?php endforeach; ?>
 </div>
 <?php endif; ?>
-
+</div>
 
 
     
@@ -292,6 +281,13 @@ class Widget_Infinite_Image_Carousel extends Widget_Base
 
 
 <script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if there's any parent element with class "jonda"
+    if (document.querySelector('.control-owl-js')) {
+
+
+
 jQuery(document).ready(function($){
     var owl = $('.owl-carousel');
     owl.owlCarousel({
@@ -3448,6 +3444,11 @@ jQuery(document).ready(function($){
 })(window.Zepto || window.jQuery, window, document);
 
 
+
+
+
+}
+});
 </script>
  
 
