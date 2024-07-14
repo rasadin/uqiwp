@@ -9,11 +9,32 @@
 .home-left-title-content{
 	padding-left:90px !important;
 }
+.service-service{
+	background-color:#F1F1F1;
+	padding-left:138px;
+    padding-top: 138px;
+}
+.part-im img {
+    height: 244px !important;
+}
 }
 /*Laptop*/
 @media only screen and (max-width:1366px) {
 .home-left-title-content{
 	padding-left:60px !important;
+}
+.service-review-section-title {
+    font-size: 110px;
+    padding: 41px 10px 16px 135px;
+    margin-left: 128px;
+}
+.service-review-section-right {
+    padding-left: 115px;
+    padding-right: 95px;
+    /* max-width: 710px; */
+}
+.part-im img {
+    height: 219px !important;
 }
 }
 /*Laptop*/
@@ -42,6 +63,7 @@
 }
 .service-review-section-right {
     padding-left: 65px;
+	padding-right:65px;
 }
 .infinite-image-carousel-container .carousel-content {
     padding:0px;
@@ -60,9 +82,9 @@
 }
 .service-review-section-title {
     font-size: 46px;
-}
-.service-review-section-title {
-    font-size: 46px;
+    line-height: 58px;
+    margin-top: -99px;
+    padding: 26px 10px 16px 69px;
 }
 .foo-colume-1 {
     -webkit-box-flex: 0;
@@ -169,6 +191,20 @@ footer.uqiwp-footer {
     font-size: 14px;
     gap: 0 13px;
 }
+.service-review-section-title {
+    padding: 31px 10px 16px 30px;
+    margin-left: 100px;
+    margin-top: -105px;
+}
+.service-review-section-dis ul li {
+    padding: 8px 0px;
+    font-size: 21px;
+}
+.service-review-section-subtext {
+    font-size: 17px;
+    margin-bottom: 22px;
+    padding-right: 20px;
+}
 }
 /*Tab Portrait*/
 @media only screen and (max-width:768px) {
@@ -187,6 +223,7 @@ footer.uqiwp-footer {
 .service-review-section-right {
     padding-left: 0;
 	padding-top:20px;
+	padding-right:0px;
 }
 .client-review-section {
     display: flex;
@@ -463,6 +500,27 @@ button.htmega-carosul-next.slick-arrow i:before {
     }
 .list-work ul {
     margin: 0 0 18px 0;
+}
+.part-im .image-name {
+    font-size: 13px;
+}
+.part-im .image-subtext {
+    font-size: 11px;
+}
+.part-im img {
+    height: 125px !important;
+}
+.part-im {
+    padding: 0px 0px;
+}
+.control-owl-js {
+    padding-top:20px;
+	
+}
+.control-owl-js .owl-carousel.owl-rtl {
+    direction: rtl;
+    margin-top: 20px;
+	padding-bottom:20px;
 }
 }
 
